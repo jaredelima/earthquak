@@ -1,8 +1,10 @@
 import 'dart:async';
 import 'dart:convert';
 
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import "package:intl/intl_browser.dart";
 
 import 'package:intl/intl.dart';
 
@@ -24,7 +26,7 @@ void main () async{
 
 
 Future<List> getJson () async{
-  String url = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson';
+  String url = "https://earthquake.usgs.gov/earthquakes/eventpage/nn00688049";
 
   http.Response response = await http.get(url);
   //status code == 200  OK
